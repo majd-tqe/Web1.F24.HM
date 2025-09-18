@@ -1,0 +1,39 @@
+/* تعيين خطوط واضحة */
+body {
+    font-family: 'Noto Naskh Arabic', sans-serif;
+}
+
+h1, h2, h3, h4, h3 {
+    font-family: 'Amiri', serif;
+}
+
+/* تأثيرات انتقال للروابط */
+.nav-link {
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* تأثيرات الكروت عند التمرير */
+.card {
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* تخصيص لون النص المحدد في Navbar */
+.nav-link.active {
+    color: #ffffff !important; /* لون أبيض للنص المحدد */
+    background-color: #0d6efd !important; /* لون خلفية أزرق غامق */
+}
+
+.socialbutton a {
+	display: inline-block;
+	margin: 0 2px;
+	font-size: 15px;
+	color: rgba(255,255,255,.7);
+	background: #2e2e2e;
+	border-radius: 5px;
+	width: 30px;
+	border: 1px solid #4b4b4b;
+}
