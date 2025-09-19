@@ -107,7 +107,7 @@ class MainNavbar extends HTMLElement {
     `;
 
     const links = this.querySelectorAll(".nav-link");
-    const current = window.location.pathname.split("/").pop();
+    const current = window.location.pathname.split("/").pop() || "index.html";
     links.forEach((link) => {
       if (link.getAttribute("href") === current) {
         link.classList.add("active");
