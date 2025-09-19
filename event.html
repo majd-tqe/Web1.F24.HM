@@ -1,82 +1,131 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>تفاصيل الفعالية - دليل فعاليات المدينة</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="/assets/css/styles.css">
-</head>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <!--Font Awesome-->
 
-<body class="bg-light">
+    <script
+      src="https://kit.fontawesome.com/1b6501c143.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body class="bg-light">
     <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-            <div class="container">
-                <a class="navbar-brand" href="index.html">دليل فعاليات المدينة</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a class="nav-link" href="index.html">الرئيسية</a></li>
-                        <li class="nav-item"><a class="nav-link" href="events.html">الفعاليات</a></li>
-                        <li class="nav-item"><a class="nav-link" href="about.html">عن الدليل</a></li>
-                        <li class="nav-item"><a class="nav-link" href="contact.html">اتصل بنا</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+      <main-navbar></main-navbar>
     </header>
 
     <main class="container my-4">
-        <div id="eventDetails"></div>
+      <div id="eventDetails"></div>
     </main>
 
-    <footer class="bg-dark text-white text-center py-3">
-        <p>معلومات التواصل: <a href="mailto:info@eventsguide.com" class="text-white">info@eventsguide.com</a></p>
-        <p>روابط السوشيال: <a href="#" class="text-white">فيسبوك</a> | <a href="#" class="text-white">تويتر</a> | <a href="#" class="text-white">إنستغرام</a></p>
-        <p>حقوق النشر © 2025 دليل فعاليات المدينة</p>
-    </footer>
+    <main-footer></main-footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
 
     <!-- بيانات الفعاليات -->
     <script>
-        const events = [
-            { id: 1, title: 'معرض فني', date: '2025-09-20', location: 'معرض الفنون', category: 'ثقافة', description: 'هذا المعرض يعرض لوحات فنية من فنانين محليين، مع ورش عمل وجولات إرشادية.', image: 'https://placehold.co/600x400?text=معرض+فني', related: [5, 3] },
-            { id: 2, title: 'مباراة كرة قدم', date: '2025-09-22', location: 'الاستاد', category: 'رياضة', description: 'مباراة محلية بين فرق شهيرة.', image: 'https://placehold.co/600x400?text=مباراة+كرة+قدم', related: [6] },
-            { id: 3, title: 'حفل موسيقي', date: '2025-09-25', location: 'القاعة الكبرى', category: 'موسيقى', description: 'حفل لفرقة شهيرة.', image: 'https://placehold.co/600x400?text=حفل+موسيقي', related: [1] },
-            { id: 4, title: 'يوم عائلي', date: '2025-09-28', location: 'الحديقة', category: 'عائلي', description: 'أنشطة للعائلات.', image: 'https://placehold.co/600x400?text=يوم+عائلي', related: [] },
-            { id: 5, title: 'محاضرة ثقافية', date: '2025-10-01', location: 'الجامعة', category: 'ثقافة', description: 'محاضرة عن التاريخ.', image: 'https://placehold.co/600x400?text=محاضرة+ثقافية', related: [1] },
-            { id: 6, title: 'سباق رياضي', date: '2025-10-05', location: 'الملعب', category: 'رياضة', description: 'سباق جري.', image: 'https://placehold.co/600x400?text=سباق+رياضي', related: [2] }
-        ];
+      const events = [
+        {
+          id: 1,
+          title: "معرض فني",
+          date: "2025-09-20",
+          location: "معرض الفنون",
+          category: "ثقافة",
+          description:
+            "هذا المعرض يعرض لوحات فنية من فنانين محليين، مع ورش عمل وجولات إرشادية.",
+          image: "https://placehold.co/600x400?text=معرض+فني",
+          related: [5, 3],
+        },
+        {
+          id: 2,
+          title: "مباراة كرة قدم",
+          date: "2025-09-22",
+          location: "الاستاد",
+          category: "رياضة",
+          description: "مباراة محلية بين فرق شهيرة.",
+          image: "https://placehold.co/600x400?text=مباراة+كرة+قدم",
+          related: [6],
+        },
+        {
+          id: 3,
+          title: "حفل موسيقي",
+          date: "2025-09-25",
+          location: "القاعة الكبرى",
+          category: "موسيقى",
+          description: "حفل لفرقة شهيرة.",
+          image: "https://placehold.co/600x400?text=حفل+موسيقي",
+          related: [1],
+        },
+        {
+          id: 4,
+          title: "يوم عائلي",
+          date: "2025-09-28",
+          location: "الحديقة",
+          category: "عائلي",
+          description: "أنشطة للعائلات.",
+          image: "https://placehold.co/600x400?text=يوم+عائلي",
+          related: [],
+        },
+        {
+          id: 5,
+          title: "محاضرة ثقافية",
+          date: "2025-10-01",
+          location: "الجامعة",
+          category: "ثقافة",
+          description: "محاضرة عن التاريخ.",
+          image: "https://placehold.co/600x400?text=محاضرة+ثقافية",
+          related: [1],
+        },
+        {
+          id: 6,
+          title: "سباق رياضي",
+          date: "2025-10-05",
+          location: "الملعب",
+          category: "رياضة",
+          description: "سباق جري.",
+          image: "https://placehold.co/600x400?text=سباق+رياضي",
+          related: [2],
+        },
+      ];
     </script>
 
     <!-- عرض تفاصيل الفعالية -->
     <script>
-        const urlParams = new URLSearchParams(window.location.search);
-        const eventId = parseInt(urlParams.get('id'), 10);
-        const event = events.find(e => e.id === eventId);
-        const detailsDiv = document.getElementById('eventDetails');
+      const urlParams = new URLSearchParams(window.location.search);
+      const eventId = parseInt(urlParams.get("id"), 10);
+      const event = events.find((e) => e.id === eventId);
+      const detailsDiv = document.getElementById("eventDetails");
 
-        if (event && detailsDiv) {
-            detailsDiv.innerHTML = `
+      if (event && detailsDiv) {
+        detailsDiv.innerHTML = `
                 <div class="card">
-                    <img src="${event.image}" alt="${event.title}" class="card-img-top">
+                    <img src="${event.image}" alt="${
+          event.title
+        }" class="card-img-top">
                     <div class="card-body">
                         <h2 class="card-title">${event.title}</h2>
-                        <p><strong>التاريخ:</strong> ${event.date.split('-').reverse().join('-')}</p>
+                        <p><strong>التاريخ:</strong> ${event.date
+                          .split("-")
+                          .reverse()
+                          .join("-")}</p>
                         <p><strong>المكان:</strong> ${event.location}</p>
                         <p><strong>التصنيف:</strong> ${event.category}</p>
                         <p><strong>الوصف:</strong> ${event.description}</p>
                     </div>
                 </div>
             `;
-        } else if (detailsDiv) {
-            detailsDiv.innerHTML = `<p class="text-danger text-center">الفعالية غير موجودة.</p>`;
-        }
+      } else if (detailsDiv) {
+        detailsDiv.innerHTML = `<p class="text-danger text-center">الفعالية غير موجودة.</p>`;
+      }
     </script>
-</body>
-
+  </body>
 </html>
