@@ -38,6 +38,12 @@ h3 {
     width: 100%;
 }
 
+.event-item .card-img-top {
+    height: 400px;
+    object-fit: cover;
+    width: 100%;
+}
+
 .socialbutton a {
   display: inline-block;
   margin: 0 2px;
