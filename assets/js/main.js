@@ -107,6 +107,9 @@ class MainFooter extends HTMLElement {
       <p>حقوق النشر © 2025 دليل فعاليات المدينة</p>
       <p>المشاركون: طالب1 (ID: 12345)، طالب2 (ID: 67890)، طالب3 (ID: 11223)</p>
     </footer>
+        <button id="backToTop" class="back-to-top-btn" title="العودة للأعلى">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
     `;
   }
 }
