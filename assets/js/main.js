@@ -1,68 +1,24 @@
 // Data for events
 const events = [
-  {
-    id: 1,
-    title: "معرض فني",
-    date: "2025-09-20",
-    location: "معرض الفنون",
-    category: "ثقافة",
-    description:
-      "هذا المعرض يعرض لوحات فنية من فنانين محليين، مع ورش عمل وجولات إرشادية.",
-    image: "https://placehold.co/600x400?text=معرض+فني",
-    related: [5, 3],
-  },
-  {
-    id: 2,
-    title: "مباراة كرة قدم",
-    date: "2025-09-22",
-    location: "الاستاد",
-    category: "رياضة",
-    description: "مباراة محلية بين فرق شهيرة.",
-    image: "https://placehold.co/600x400?text=مباراة+كرة+قدم",
-    related: [6],
-  },
-  {
-    id: 3,
-    title: "حفل موسيقي",
-    date: "2025-09-25",
-    location: "القاعة الكبرى",
-    category: "موسيقى",
-    description: "حفل لفرقة شهيرة.",
-    image: "https://placehold.co/600x400?text=حفل+موسيقي",
-    related: [1],
-  },
-  {
-    id: 4,
-    title: "يوم عائلي",
-    date: "2025-09-28",
-    location: "الحديقة",
-    category: "عائلي",
-    description: "أنشطة للعائلات.",
-    image: "https://placehold.co/600x400?text=يوم+عائلي",
-    related: [],
-  },
-  {
-    id: 5,
-    title: "محاضرة ثقافية",
-    date: "2025-10-01",
-    location: "الجامعة",
-    category: "ثقافة",
-    description: "محاضرة عن التاريخ.",
-    image: "https://placehold.co/600x400?text=محاضرة+ثقافية",
-    related: [1],
-  },
-  {
-    id: 6,
-    title: "سباق رياضي",
-    date: "2025-10-05",
-    location: "الملعب",
-    category: "رياضة",
-    description: "سباق جري.",
-    image: "https://placehold.co/600x400?text=سباق+رياضي",
-    related: [2],
-  },
+  { id: 1, title: 'معرض فني', date: '2025-09-20', location: 'معرض الفنون', category: 'ثقافة', description: 'هذا المعرض يعرض لوحات فنية من فنانين محليين، مع ورش عمل وجولات إرشادية.', image: 'assets/img/art.jpg', related: [5, 3] },
+  { id: 2, title: 'مباراة كرة قدم', date: '2025-09-22', location: 'الاستاد', category: 'رياضة', description: 'مباراة محلية بين فرق شهيرة.', image: 'assets/img/football.jpeg', related: [6] },
+  { id: 3, title: 'حفل موسيقي', date: '2025-09-25', location: 'القاعة الكبرى', category: 'موسيقى', description: 'حفل لفرقة شهيرة.', image: 'assets/img/music.jpeg', related: [1] },
+  { id: 4, title: 'يوم عائلي', date: '2025-09-28', location: 'الحديقة', category: 'عائلي', description: 'أنشطة للعائلات.', image: 'assets/img/family.jpeg', related: [] },
+  { id: 5, title: 'محاضرة ثقافية', date: '2025-10-01', location: 'الجامعة', category: 'ثقافة', description: 'محاضرة عن التاريخ.', image: 'assets/img/lecture.jpeg', related: [1] },
+  { id: 6, title: 'سباق رياضي', date: '2025-10-05', location: 'الملعب', category: 'رياضة', description: 'سباق جري.', image: 'assets/img/sport.jpeg', related: [2] },
+  { id: 7, title: 'معرض دمشق الدولي', date: '2025-08-27 - 2025-09-05', location: 'مدينة المعارض - Damascus Fairgrounds', category: 'ثقافة / معرض تجاري', description: 'أكبر حدث تجاري/ثقافي في المدينة مع أجنحة شركات محلية ودولية، عروض ثقافية ومسرحيات وأكشاك طعام.', image: 'assets/img/damascus_fair.jpg', related: [] },
+  { id: 8, title: 'مهرجان النادي الصيفي', date: '2025-07-15', location: 'ساحات مفتوحة / نوادي ثقافية بدمشق', category: 'مهرجان / عائلي / رياضي / فني', description: 'عروض رياضية، أنشطة للأطفال، معرض لوحات وعروض موسيقية محلية.', image: 'assets/img/summer_festival.jpg', related: [] },
+  { id: 9, title: 'ليلة موسيقى تقليدية في الميدان', date: '2025-10-10', location: 'ساحة الميدان أو مسرح صغير', category: 'موسيقى / ثقافة', description: 'أمسية موسيقية تقدم مقامات شامية وأمّهات فصحى، مدة ساعتين، الدخول مجاني أو بتذاكر رمزية.', image: 'assets/img/traditional_music.jpg', related: [3] },
+  { id: 10, title: 'معرض فنون معاصرة', date: '2025-11-05 - 2025-11-20', location: 'قاعة عرض / مركز ثقافي محلي', category: 'فن / معرض', description: 'معرض لوحات وتصوير فوتوغرافي لفنانين شباب من دمشق.', image: 'assets/img/contemporary_art.jpg', related: [1] },
+  { id: 11, title: 'ماراثون المدينة', date: '2025-11-02', location: 'كورنيش / شارع رئيسي (10 كم)', category: 'رياضة / مجتمع', description: 'سباق مفتوح لجميع الأعمار مع فئات للعائلات والمحترفين ونقاط تسجيل.', image: 'assets/img/marathon.jpg', related: [6, 2] },
+  { id: 12, title: 'مهرجان طعام دمشق', date: '2025-12-05', location: 'موقع مفتوح بدمشق', category: 'طعام / ثقافة', description: 'أكشاك مأكولات شعبية، أطباق شامية، مسابقات طبخ وركن للأطفال.', image: 'assets/img/food_festival.jpg', related: [] },
+  { id: 13, title: 'عرض مسرحي في دار الأوبرا', date: '2025-10-25', location: 'دار الأوبرا / قاعة محلية', category: 'مسرح', description: 'مسرحية محلية تقليدية أو معاصرة.', image: 'assets/img/theatre.jpg', related: [] },
+  { id: 14, title: 'سوق الحرف في سوق الحميدية', date: '2025-11-15', location: 'سوق الحميدية، دمشق', category: 'سوق / تقليدي', description: 'سوق للحرفيين يتضمن منتجات تقليدية وحلويات ومشغولات يدوية.', image: 'assets/img/craft_market.jpg', related: [] },
+  { id: 15, title: 'معرض الزهور بدمشق', date: '2025-06-26 - 2025-07-14', location: 'حديقة تشرين، دمشق', category: 'زهور / طبيعة', description: 'معرض نباتات وزهور بمشاركة شركات محلية ودولية مع مسابقات زراعة وعروض للأطفال.', image: 'assets/img/flower_exhibition.jpg', related: [] }
 ];
 
+
+// innerHTML for navbar and footer
 class MainNavbar extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `

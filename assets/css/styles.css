@@ -15,12 +15,11 @@ h3 {
   font-family: "Amiri", serif;
 }
 
-/* تأثيرات انتقال للروابط */
 .nav-link {
   transition: background-color 0.3s, color 0.3s;
 }
 
-/* تأثيرات الكروت عند التمرير */
+/* cards effects */
 .card {
   transition: transform 0.3s;
 }
@@ -29,9 +28,14 @@ h3 {
   transform: translateY(-5px);
 }
 
-/* تخصيص لون النص المحدد في Navbar */
+/* nav bar text color */
 .nav-link.active {
-  color: #ffffff !important; /* لون أبيض للنص المحدد */
+  color: #ffffff !important;}
+
+#eventCarousel .carousel-item img {
+    height: 700px;
+    object-fit: cover;
+    width: 100%;
 }
 
 .socialbutton a {
