@@ -44,6 +44,10 @@ h3 {
     width: 100%;
 }
 
+.mrl-8 {
+  margin: 0 8px 0 8px;
+}
+
 .socialbutton a {
   display: inline-block;
   margin: 0 2px;
@@ -73,6 +77,29 @@ h3 {
 .dark-mode .card .btn {
   background-color: var(--main-dark-blue);
   border: none;
+}
+
+.dark-mode .text-muted {
+  color: #ccc !important;
+}
+
+
+.dark-mode .accordion-body,.dark-mode .accordion-button {
+  background-color: #272c31;
+  color: #fff;
+}
+
+.dark-mode .accordion-button:not(.collapsed) {
+	background-color: var(--bs-accordion-active-bg);
+  color: var(--bs-accordion-active-color);
+}
+
+.dark-mode .accordion-button::after {
+  filter: invert(1);
+}
+
+.accordion-button:not(.collapsed)::after {
+  filter: none;
 }
 
 .btn-group a {
@@ -106,10 +133,14 @@ h3 {
   border-color: var(--main-dark-blue);
 }
 
-.dark-mode #contactForm {
-  background-color: #23272b;
+.dark-mode #subject {
+  background-color: #272c31;
   color: #fff;
-  border: 1px solid #444;
+  border-color: #444;
+}
+
+.dark-mode .form-select {
+--bs-form-select-bg-img: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
 }
 
 .dark-mode #contactForm .form-label,
@@ -131,6 +162,10 @@ h3 {
   background-color: var(--main-dark-blue);
   border-color: var(--main-dark-blue);
   color: #fff;
+}
+
+.dark-mode .card-header {
+  background-color: var(--main-dark-blue) !important;
 }
 
 .dark-mode #filterBtn {

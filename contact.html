@@ -16,53 +16,116 @@
       crossorigin="anonymous"
     ></script>
   </head>
-  <body>
+<body>
     <header>
-      <main-navbar></main-navbar>
+        <main-navbar></main-navbar>
     </header>
 
-    <main class="container my-4">
-      <section class="mb-4">
-        <h2 class="h4 mb-3">اتصل بنا</h2>
+    <main class="container my-5">
+        <h1 class="text-center mb-4">اتصل بنا</h1>
 
-        <form id="contactForm" class="p-4 rounded shadow">
-          <div class="mb-3">
-            <label for="name" class="form-label">الاسم</label>
-            <input type="text" class="form-control" id="name" required />
-          </div>
-          <div class="mb-3">
-            <label for="email" class="form-label">البريد الإلكتروني</label>
-            <input type="email" class="form-control" id="email" required />
-          </div>
-          <div class="mb-3">
-            <label for="message" class="form-label">الرسالة</label>
-            <textarea
-              class="form-control"
-              id="message"
-              rows="4"
-              required
-            ></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary">إرسال</button>
-        </form>
-        <div id="formMessage" class="mt-3"></div>
-      </section>
+        <div class="row">
+            <div class="col-md-8">
+                <!-- رسائل النجاح/الخطأ -->
+                <div id="formMessages"></div>
 
-      <section>
-        <h2 class="h4 mb-3">معلومات تواصل بديلة</h2>
+                <!-- نموذج الاتصال -->
+                <div class="card">
+                    <div class="card-header bg-primary text-white">
+                        <h5 class="card-title mb-0">أرسل رسالة</h5>
+                    </div>
+                    <div class="card-body">
+                        <form id="contactForm">
+                            <div class="mb-3">
+                                <label for="name" class="form-label">الاسم الكامل</label>
+                                <input type="text" class="form-control" id="name" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">البريد الإلكتروني</label>
+                                <input type="email" class="form-control" id="email" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="subject" class="form-label">الموضوع</label>
+                                <select class="form-select" id="subject">
+                                    <option value="استفسار">استفسار عام</option>
+                                    <option value="مقترح">مقترح</option>
+                                    <option value="شكوى">شكوى</option>
+                                    <option value="فعالية">إضافة فعالية</option>
+                                    <option value="تعاون">فرص تعاون</option>
+                                    <option value="أخرى">أخرى</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="message" class="form-label">الرسالة</label>
+                                <textarea class="form-control" id="message" rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">إرسال الرسالة</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
 
-        <p>
-          البريد العام:
-          <a href="mailto:info@eventsguide.com" class="text-primary"
-            >info@eventsguide.com</a
-          >
-        </p>
-        <p>
-          حسابات السوشيال: <a href="#" class="text-primary">فيسبوك</a>،
-          <a href="#" class="text-primary">تويتر</a>،
-          <a href="#" class="text-primary">إنستغرام</a>
-        </p>
-      </section>
+            <div class="col-md-4">
+                <!-- معلومات التواصل -->
+                <div class="card mb-4">
+                    <div class="card-header bg-primary text-white">
+                        <h5 class="card-title mb-0">معلومات التواصل</h5>
+                    </div>
+                    <div class="card-body">
+                        <p><i class="fas fa-envelope me-2 text-primary"></i> <strong>البريد الإلكتروني:</strong> info@cityevents.com</p>
+                        <p><i class="fas fa-phone me-2 text-primary"></i> <strong>الهاتف:</strong> 0123456789</p>
+                        <p><i class="fas fa-map-marker-alt me-2 text-primary"></i> <strong>العنوان:</strong> المدينة - الحي - الشارع الرئيسي</p>
+                    </div>
+                </div>
+
+                <!-- وسائل التواصل الاجتماعي -->
+                <div class="card">
+                    <div class="card-header bg-primary text-white">
+                        <h5 class="card-title mb-0">وسائل التواصل الاجتماعي</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="d-flex justify-content-around">
+                            <a href="#" class="btn btn-outline-primary btn-social">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="btn btn-outline-primary btn-social">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="btn btn-outline-primary btn-social">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="btn btn-outline-primary btn-social">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- أوقات العمل -->
+                <div class="card mt-4">
+                    <div class="card-header bg-primary text-white">
+                        <h5 class="card-title mb-0">أوقات العمل</h5>
+                    </div>
+                    <div class="card-body">
+                        <p><strong>الأحد - الخميس:</strong> 8:00 ص - 4:00 م</p>
+                        <p><strong>الجمعة والسبت:</strong> مغلق</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- خريطة الموقع -->
+        <div class="card mt-5">
+            <div class="card-header bg-primary text-white">
+                <h5 class="card-title mb-0">خريطة الموقع</h5>
+            </div>
+            <div class="card-body">
+                <div class="ratio ratio-16x9">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3621.231831553158!2d46.67278227599606!3d24.831122277956!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2ee3e9c2e7c2b5%3A0x2d3d2e3d3e3d3e3d!2sRiyadh%2C%20Saudi%20Arabia!5e0!3m2!1sen!2sus!4v1633456789012!5m2!1sen!2sus"
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
     </main>
 
     <main-footer></main-footer>

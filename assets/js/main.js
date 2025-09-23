@@ -80,18 +80,16 @@ class MainFooter extends HTMLElement {
     this.innerHTML = `
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
       <div class="container justify-content-center">
-        <a class="text-decoration-none text-white lh-base" href="#">A-Z</a>
+        <a class="text-decoration-none text-white lh-base mrl-8" href="index.html">الرئيسية</a>
+        <a class="text-decoration-none text-white lh-base mrl-8" href="events.html">الفعاليات</a>
+        <a class="text-decoration-none text-white lh-base mrl-8" href="about.html">عن الدليل</a>
+        <a class="text-decoration-none text-white lh-base mrl-8" href="contact.html">اتصل بنا</a>
       </div>
     </nav>
     <footer class="dark-footer text-white text-center py-3">
-      <p>
-        معلومات التواصل:
-        <a href="mailto:info@eventsguide.com" class="text-white"
-          >info@eventsguide.com</a
-        >
-      </p>
-      <p>روابط السوشيال:</p>
-      <div class="socialbutton">
+                    <p>البريد الإلكتروني: info@cityevents.com</p>
+                    <p> الهاتف: 0123456789</p>
+      <div class="socialbutton mb-1">
         <a href="#" class="text-white"
           ><i class="fa-brands fa-facebook-f"></i
         ></a>
@@ -104,9 +102,11 @@ class MainFooter extends HTMLElement {
           ><i class="fa-brands fa-instagram"></i
         ></a>
       </div>
-      <p>حقوق النشر © 2025 دليل فعاليات المدينة</p>
-      <p>المشاركون: طالب1 (ID: 12345)، طالب2 (ID: 67890)، طالب3 (ID: 11223)</p>
-    </footer>
+         <p class="mb-0">© 2025 دليل فعاليات المدينة. جميع الحقوق محفوظة.</p>
+         <p>تم إنشاء هذا الموقع كجزء من مشروع مقرر BWP401</p>
+<p>
+  <a class="text-decoration-none text-white" href="about.html">فريق العمل</a>: [سيزار - مجد - أكرم - شيماء - الاء]
+</p>    </footer>
         <button id="backToTop" class="back-to-top-btn" title="العودة للأعلى">
       <i class="fa-solid fa-arrow-up"></i>
     </button>
