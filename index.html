@@ -1,159 +1,231 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ar" dir="rtl">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>دليل فعاليات المدينة</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="/assets/css/styles.css">
-</head>
+    <link rel="stylesheet" href="assets/css/styles.css">
 
-<body class="bg-light">
+    <!--Font Awesome-->
+
+    <script
+      src="https://kit.fontawesome.com/1b6501c143.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
     <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-            <div class="container">
-                <a class="navbar-brand" href="#">دليل فعاليات المدينة</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a class="nav-link active" href="index.html">الرئيسية</a></li>
-                        <li class="nav-item"><a class="nav-link" href="events.html">الفعاليات</a></li>
-                        <li class="nav-item"><a class="nav-link" href="about.html">عن الدليل</a></li>
-                        <li class="nav-item"><a class="nav-link" href="contact.html">اتصل بنا</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+      <main-navbar></main-navbar>
     </header>
 
     <main class="container my-4">
-        <section class="mb-4">
-            <h2 class="h4 mb-3">فعاليات بارزة هذا الأسبوع</h2>
-            <div id="eventCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="assets\img\art.jpg" alt="معرض فني" class="d-block w-100">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5>معرض فني - 20-09-2025</h5>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <img src="assets\img\football.jpeg" alt="مباراة كرة قدم" class="d-block w-100">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5>مباراة كرة قدم - 22-09-2025</h5>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <img src="assets\img\music.jpeg" alt="حفل موسيقي" class="d-block w-100">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5>حفل موسيقي - 25-09-2025</h5>
-                        </div>
-                    </div>
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#eventCarousel"
-                    data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">السابق</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#eventCarousel"
-                    data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">التالي</span>
-                </button>
+      <section class="mb-4">
+        <h2 class="h4 mb-3">
+          <svg
+            width="32px"
+            height="32px"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g
+              id="SVGRepo_tracerCarrier"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            ></g>
+            <g id="SVGRepo_iconCarrier">
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M12.4803 2.76059C13.2315 2.30898 14.208 2.28697 15.0418 2.88997C17.7027 4.81436 20.75 8.2447 20.75 13.1111C20.75 16.9175 19.1146 19.3652 17.0325 20.835C15.7533 21.738 14.3232 22.2609 13.0331 22.5258C12.5577 22.6872 12.1 22.75 11.7333 22.75C11.6306 22.75 11.521 22.746 11.4058 22.7374C11.242 22.746 11.0843 22.75 10.9333 22.75C9.47245 22.75 7.31363 22.2658 5.50409 20.806C3.6625 19.3203 2.25 16.8771 2.25 13.1111C2.25 10.0344 3.87536 7.9652 5.40507 6.79826C6.04192 6.31244 6.80509 6.30435 7.40898 6.63407C7.99302 6.95295 8.40231 7.56762 8.47627 8.28958L8.5621 9.12741C8.59508 9.44943 8.75974 9.71671 8.93177 9.84683C9.0125 9.90789 9.07802 9.92706 9.12163 9.93034C9.15843 9.93311 9.21562 9.92815 9.30063 9.8729C9.95369 9.44849 10.4496 8.68506 10.7833 7.78664C11.1138 6.89653 11.25 5.96663 11.25 5.33336V5.00973C11.25 4.03696 11.7444 3.20294 12.4803 2.76059ZM12.6314 21.0766C12.2057 21.1595 11.7992 21.2101 11.4272 21.2338C10.9433 21.1848 10.3335 21.0197 9.82415 20.6704C9.23942 20.2694 8.75 19.6065 8.75 18.4445C8.75 17.0422 9.61756 15.9772 10.5398 15.295C10.5423 15.3051 10.5441 15.3178 10.5441 15.3334V15.3443C10.5441 15.572 10.5441 15.9166 10.587 16.275C10.6296 16.6315 10.7214 17.0698 10.9474 17.4553C11.1049 17.724 11.3471 17.9513 11.6758 18.0481C11.9989 18.1433 12.3068 18.0833 12.5468 17.97C13.0028 17.7545 13.3288 17.3047 13.4657 16.8303C13.8778 17.1659 14.25 17.6907 14.25 18.4445C14.25 19.648 13.8025 20.3145 13.3124 20.6986C13.0975 20.867 12.8624 20.99 12.6314 21.0766ZM15.5176 20.0225C15.7384 19.8964 15.9557 19.759 16.1675 19.6095C17.8631 18.4126 19.25 16.4159 19.25 13.1111C19.25 8.92389 16.6279 5.88822 14.1627 4.10543C13.838 3.8706 13.5133 3.88975 13.2531 4.04619C12.9775 4.21188 12.75 4.5528 12.75 5.00973V5.33336C12.75 6.14196 12.5831 7.24891 12.1894 8.30886C11.7988 9.3605 11.1494 10.4604 10.118 11.1306C9.38388 11.6077 8.59212 11.4706 8.02694 11.0432C7.49344 10.6397 7.14144 9.97856 7.0699 9.28027L6.98408 8.44244C6.95826 8.19039 6.82167 8.02241 6.69016 7.95061C6.5785 7.88965 6.45645 7.88284 6.31484 7.99087C5.04758 8.9576 3.75 10.6247 3.75 13.1111C3.75 16.4562 4.98195 18.4575 6.44591 19.6385C6.84345 19.9592 7.263 20.2233 7.68701 20.4381C7.41384 19.8888 7.25 19.2282 7.25 18.4445C7.25 16.341 8.57017 14.8717 9.69806 14.0521C10.2109 13.6795 10.8273 13.6907 11.2979 13.9755C11.7522 14.2504 12.0441 14.7589 12.0441 15.3334C12.0441 15.5682 12.0448 15.8335 12.0763 16.0969C12.0815 16.14 12.0873 16.1814 12.0938 16.221C12.254 15.8525 12.5484 15.5666 12.897 15.4155C13.3152 15.2342 13.847 15.2379 14.2912 15.5719C14.9907 16.098 15.75 17.0424 15.75 18.4445C15.75 19.0383 15.666 19.5627 15.5176 20.0225Z"
+                fill="#000000"
+              ></path>
+            </g>
+          </svg>
+          فعاليات بارزة هذا الأسبوع
+        </h2>
+        <div id="eventCarousel" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img
+                src="assets\img\art.jpg"
+                alt="معرض فني"
+                class="d-block w-100"
+              />
+              <div class="carousel-caption d-none d-md-block">
+                <h5>معرض فني - 20-09-2025</h5>
+              </div>
             </div>
-        </section>
-
-        <section class="mb-4">
-            <h2 class="h4 mb-3">تصنيفات سريعة</h2>
-            <div class="btn-group" role="group">
-                <a href="events.html?category=ثقافة" class="btn btn-outline-primary">ثقافة</a>
-                <a href="events.html?category=رياضة" class="btn btn-outline-primary">رياضة</a>
-                <a href="events.html?category=موسيقى" class="btn btn-outline-primary">موسيقى</a>
-                <a href="events.html?category=عائلي" class="btn btn-outline-primary">عائلي</a>
+            <div class="carousel-item">
+              <img
+                src="assets\img\football.jpeg"
+                alt="مباراة كرة قدم"
+                class="d-block w-100"
+              />
+              <div class="carousel-caption d-none d-md-block">
+                <h5>مباراة كرة قدم - 22-09-2025</h5>
+              </div>
             </div>
-        </section>
-
-        <section>
-            <h2 class="h4 mb-3">أحدث الفعاليات</h2>
-            <div class="row row-cols-1 row-cols-md-3 g-4">
-                <div class="col">
-                    <div class="card h-100">
-                        <img src="assets\img\family.jpeg" alt="يوم عائلي" class="card-img-top">
-                        <div class="card-body">
-                            <h5 class="card-title">يوم عائلي</h5>
-                            <p class="card-text">تاريخ: 28-09-2025، مكان: الحديقة العامة، تصنيف: عائلي</p>
-                            <a href="event.html?id=4" class="btn btn-primary">التفاصيل</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card h-100">
-                        <img src="assets\img\lecture.jpeg" alt="محاضرة ثقافية" class="card-img-top">
-                        <div class="card-body">
-                            <h5 class="card-title">محاضرة ثقافية</h5>
-                            <p class="card-text">تاريخ: 01-10-2025، مكان: الجامعة، تصنيف: ثقافة</p>
-                            <a href="event.html?id=5" class="btn btn-primary">التفاصيل</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card h-100">
-                        <img src="assets\img\sport.jpeg" alt="سباق رياضي" class="card-img-top">
-                        <div class="card-body">
-                            <h5 class="card-title">سباق رياضي</h5>
-                            <p class="card-text">تاريخ: 05-10-2025، مكان: الملعب، تصنيف: رياضة</p>
-                            <a href="event.html?id=6" class="btn btn-primary">التفاصيل</a>
-
-                        </div>
-                    </div>
-                </div>
+            <div class="carousel-item">
+              <img
+                src="assets\img\music.jpeg"
+                alt="حفل موسيقي"
+                class="d-block w-100"
+              />
+              <div class="carousel-caption d-none d-md-block">
+                <h5>حفل موسيقي - 25-09-2025</h5>
+              </div>
             </div>
-        </section>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#eventCarousel"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">السابق</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#eventCarousel"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">التالي</span>
+          </button>
+        </div>
+      </section>
+
+      <section class="mb-4">
+        <h2 class="h4 mb-3">
+          <svg
+            width="32px"
+            height="64px"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g
+              id="SVGRepo_tracerCarrier"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            ></g>
+            <g id="SVGRepo_iconCarrier">
+              <path
+                d="M3 4.6C3 4.03995 3 3.75992 3.10899 3.54601C3.20487 3.35785 3.35785 3.20487 3.54601 3.10899C3.75992 3 4.03995 3 4.6 3H19.4C19.9601 3 20.2401 3 20.454 3.10899C20.6422 3.20487 20.7951 3.35785 20.891 3.54601C21 3.75992 21 4.03995 21 4.6V6.33726C21 6.58185 21 6.70414 20.9724 6.81923C20.9479 6.92127 20.9075 7.01881 20.8526 7.10828C20.7908 7.2092 20.7043 7.29568 20.5314 7.46863L14.4686 13.5314C14.2957 13.7043 14.2092 13.7908 14.1474 13.8917C14.0925 13.9812 14.0521 14.0787 14.0276 14.1808C14 14.2959 14 14.4182 14 14.6627V17L10 21V14.6627C10 14.4182 10 14.2959 9.97237 14.1808C9.94787 14.0787 9.90747 13.9812 9.85264 13.8917C9.7908 13.7908 9.70432 13.7043 9.53137 13.5314L3.46863 7.46863C3.29568 7.29568 3.2092 7.2092 3.14736 7.10828C3.09253 7.01881 3.05213 6.92127 3.02763 6.81923C3 6.70414 3 6.58185 3 6.33726V4.6Z"
+                stroke="#000000"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path>
+            </g>
+          </svg>
+          تصنيفات سريعة
+        </h2>
+        <div class="btn-group gap-2" role="group">
+          <a href="events.html?category=ثقافة" class="btn btn-outline-primary"
+            >ثقافة</a
+          >
+          <a href="events.html?category=رياضة" class="btn btn-outline-primary"
+            >رياضة</a
+          >
+          <a href="events.html?category=موسيقى" class="btn btn-outline-primary"
+            >موسيقى</a
+          >
+          <a href="events.html?category=عائلي" class="btn btn-outline-primary"
+            >عائلي</a
+          >
+        </div>
+      </section>
+
+      <section>
+        <h2 class="h4 mb-3">
+          <svg
+            width="32px"
+            height="64px"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g
+              id="SVGRepo_tracerCarrier"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            ></g>
+            <g id="SVGRepo_iconCarrier">
+              <path
+                d="M19 3V7M17 5H21M19 17V21M17 19H21M10 5L8.53001 8.72721C8.3421 9.20367 8.24814 9.4419 8.10427 9.64278C7.97675 9.82084 7.82084 9.97675 7.64278 10.1043C7.4419 10.2481 7.20367 10.3421 6.72721 10.53L3 12L6.72721 13.47C7.20367 13.6579 7.4419 13.7519 7.64278 13.8957C7.82084 14.0233 7.97675 14.1792 8.10427 14.3572C8.24814 14.5581 8.3421 14.7963 8.53001 15.2728L10 19L11.47 15.2728C11.6579 14.7963 11.7519 14.5581 11.8957 14.3572C12.0233 14.1792 12.1792 14.0233 12.3572 13.8957C12.5581 13.7519 12.7963 13.6579 13.2728 13.47L17 12L13.2728 10.53C12.7963 10.3421 12.5581 10.2481 12.3572 10.1043C12.1792 9.97675 12.0233 9.82084 11.8957 9.64278C11.7519 9.4419 11.6579 9.20367 11.47 8.72721L10 5Z"
+                stroke="#000000"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path>
+            </g>
+          </svg>
+          أحدث الفعاليات
+        </h2>
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+          <div class="col">
+            <div class="card h-100">
+              <img
+                src="assets\img\family.jpeg"
+                alt="يوم عائلي"
+                class="card-img-top"
+              />
+              <div class="card-body">
+                <h5 class="card-title">يوم عائلي</h5>
+                <p class="card-text">
+                  تاريخ: 28-09-2025، مكان: الحديقة العامة، تصنيف: عائلي
+                </p>
+                <a href="event.html?id=4" class="btn btn-primary">التفاصيل</a>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100">
+              <img
+                src="assets\img\lecture.jpeg"
+                alt="محاضرة ثقافية"
+                class="card-img-top"
+              />
+              <div class="card-body">
+                <h5 class="card-title">محاضرة ثقافية</h5>
+                <p class="card-text">
+                  تاريخ: 01-10-2025، مكان: الجامعة، تصنيف: ثقافة
+                </p>
+                <a href="event.html?id=5" class="btn btn-primary">التفاصيل</a>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100">
+              <img
+                src="assets\img\sport.jpeg"
+                alt="سباق رياضي"
+                class="card-img-top"
+              />
+              <div class="card-body">
+                <h5 class="card-title">سباق رياضي</h5>
+                <p class="card-text">
+                  تاريخ: 05-10-2025، مكان: الملعب، تصنيف: رياضة
+                </p>
+                <a href="event.html?id=6" class="btn btn-primary">التفاصيل</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
-   <footer class="bg-dark text-white py-4 mt-5">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <h5>دليل فعاليات المدينة</h5>
-                    <p>منصة شاملة للتعريف بجميع الفعاليات والأنشطة في المدينة.</p>
-                </div>
-                <div class="col-md-4">
-                    <h5>روابط سريعة</h5>
-                    <ul class="list-unstyled">
-                        <li><a href="index.html" class="text-white">الرئيسية</a></li>
-                        <li><a href="events.html" class="text-white">الفعاليات</a></li>
-                        <li><a href="about.html" class="text-white">عن الدليل</a></li>
-                        <li><a href="contact.html" class="text-white">اتصل بنا</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-4">
-                    <h5>تواصل معنا</h5>
-                    <p>البريد الإلكتروني: info@cityevents.com</p>
-                    <p> الهاتف: 0123456789</p>
-                    <div class="social-links">
-                        <a href="#" class="text-white me-2"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="text-white me-2"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="text-white me-2"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-            </div>
-            <hr>
-            <div class="text-center">
-                <p class="mb-0">© 2025 دليل فعاليات المدينة. جميع الحقوق محفوظة.</p>
-                <p>تم إنشاء هذا الموقع كجزء من مشروع مقرر BWP401</p>
-                <p>فريق العمل: [سيزار - مجد - أكرم - شيماء - الاء ]</p>
-            </div>
-        </div>
-    </footer>
+    <main-footer></main-footer>
 
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-    <script src="js/main.js"></script>
-</body>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
 </html>
