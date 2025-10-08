@@ -104,10 +104,12 @@ class MainFooter extends HTMLElement {
       </div>
          <p class="mb-0">© 2025 دليل فعاليات المدينة. جميع الحقوق محفوظة.</p>
          <p>تم إنشاء هذا الموقع كجزء من مشروع مقرر BWP401</p>
-<p>
+<p style="white-space: normal; word-wrap: break-word; overflow-wrap: anywhere;">
   <a class="text-decoration-none text-white" href="about.html">فريق العمل</a>: [سيزار - مجد - أكرم - شيماء - الاء]
-[alaa_315297,shaimaa_298178,muhammed_akram_287865,majd_290635,cesar_287052]
-</p>     </footer>
+  [alaa_315297,shaimaa_298178,muhammed_akram_287865,majd_290635,cesar_287052]
+</p>
+
+</footer>
         <button id="backToTop" class="back-to-top-btn" title="العودة للأعلى">
       <i class="fa-solid fa-arrow-up"></i>
     </button>
