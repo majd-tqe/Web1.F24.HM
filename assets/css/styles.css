@@ -5,6 +5,7 @@
 /* تعيين خطوط واضحة */
 body {
   font-family: "Noto Naskh Arabic", sans-serif;
+  margin-top: 100px;
 }
 
 h1,
