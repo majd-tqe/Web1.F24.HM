@@ -427,7 +427,7 @@ let translations = {};
 
 // تحميل ملف الترجمة عند بدء الصفحة
 async function loadTranslations() {
-  const response = await fetch("/assets/translation/translations.json");
+  const response = await fetch("assets/translation/translations.json");
   translations = await response.json();
 }
 
