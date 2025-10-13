@@ -1,0 +1,30 @@
+﻿{
+  "ar": {
+    "title": "دليل فعاليات المدينة",
+    "home": "الرئيسية",
+    "events": "الفعاليات",
+    "about": "عن الدليل",
+    "contact": "اتصل بنا",
+    "darkMode": "الوضع الداكن",
+    "welcome": "مرحبًا بك في دليل فعاليات المدينة",
+    "featured-events": "فعاليات بارزة هذا الأسبوع ",
+    "team": "فريق العمل: ",
+    "team-members": "سيزار | مجد | أكرم | شيماء | الاء",
+    "fast-filter": "تصنيفات سريعة",
+    "latest-events": "أحدث الفعاليات"
+  },
+  "en": {
+    "title": "City Events Guide",
+    "home": "Home",
+    "events": "Events",
+    "about": "About",
+    "contact": "Contact",
+    "darkMode": "Dark Mode",
+    "welcome": "Welcome to City Events Guide",
+    "featured-events": "Featured Events This Week",
+    "team": "Our Team: ",
+    "team-members": "Cesar | Majd | Akram | Shaimaa | Alaa",
+    "fast-filter": "Quick Categories",
+    "latest-events": "Latest Events"
+  }
+}

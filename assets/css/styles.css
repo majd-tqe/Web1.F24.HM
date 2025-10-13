@@ -6,6 +6,30 @@ body {
   font-family: "Noto Naskh Arabic", sans-serif;
 }
 
+
+body.rtl {
+  direction: rtl;
+  text-align: right;
+}
+
+body.ltr {
+  direction: ltr;
+  text-align: left;
+}
+
+.navbar.rtl .navbar-nav {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+.navbar.ltr .navbar-nav {
+  margin-left: auto;
+  margin-right: 0;
+}
+
+
+
+
 h1,
 h2,
 h3,
