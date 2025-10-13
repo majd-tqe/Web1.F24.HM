@@ -222,15 +222,15 @@ class MainFooter extends HTMLElement {
     this.innerHTML = `
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
       <div class="container justify-content-center">
-        <a class="text-decoration-none text-white lh-base mrl-8" href="index.html">الرئيسية</a>
-        <a class="text-decoration-none text-white lh-base mrl-8" href="events.html">الفعاليات</a>
-        <a class="text-decoration-none text-white lh-base mrl-8" href="about.html">عن الدليل</a>
-        <a class="text-decoration-none text-white lh-base mrl-8" href="contact.html">اتصل بنا</a>
+        <a class="text-decoration-none text-white lh-base mrl-8" href="index.html" data-i18n="home">الرئيسية</a>
+        <a class="text-decoration-none text-white lh-base mrl-8" href="events.html" data-i18n="events">الفعاليات</a>
+        <a class="text-decoration-none text-white lh-base mrl-8" href="about.html" data-i18n="about">عن الدليل</a>
+        <a class="text-decoration-none text-white lh-base mrl-8" href="contact.html" data-i18n="contact">اتصل بنا</a>
       </div>
     </nav>
     <footer class="dark-footer text-white text-center py-3">
-                    <p>البريد الإلكتروني: info@cityevents.com</p>
-                    <p> الهاتف: 0123456789</p>
+                    <p><span data-i18n="our-email"></span></p>
+                    <p> <span data-i18n="our-phone"></span></p>
       <div class="socialbutton mb-1">
         <a href="#" class="text-white"
           ><i class="fa-brands fa-facebook-f"></i
@@ -244,11 +244,10 @@ class MainFooter extends HTMLElement {
           ><i class="fa-brands fa-instagram"></i
         ></a>
       </div>
-         <p class="mb-0">© 2025 دليل فعاليات المدينة. جميع الحقوق محفوظة.</p>
-         <p>تم إنشاء هذا الموقع كجزء من مشروع مقرر BWP401</p>
+         <p class="mb-0"><span data-i18n="credit"></span></p>
+         <p><span data-i18n="inf0"></span></p>
 <p style="white-space: normal; word-wrap: break-word; overflow-wrap: anywhere;">
-  <a class="text-decoration-none text-white" href="about.html">فريق العمل</a>: [سيزار - مجد - أكرم - شيماء - الاء]
-  [alaa_315297,shaimaa_298178,muhammed_akram_287865,majd_290635,cesar_287052]
+  <a class="text-decoration-none text-white" href="about.html"><span data-i18n="team"></span></a><span data-i18n="team-members2"></span>
 </p>
 
 </footer>
